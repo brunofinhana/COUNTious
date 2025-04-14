@@ -1,0 +1,46 @@
+/* Basic CSS reset */
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* Root elements styling */
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    background-color: #333;
+}
+
+h1, h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    /* transition: hover 3s ease; */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Classes styling */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
