@@ -1,14 +1,23 @@
 /* Basic CSS reset */
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+}
 
-/* Root elements styling */
+/* ROOT ELEMENTS STYLING */
 body {
     font-family: 'DM Sans', sans-serif;
     color: white;
     background-color: #333;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 h1, h2 {
@@ -18,11 +27,10 @@ h1, h2 {
 button {
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;
-    /* transition: hover 3s ease; */
     color: white;
     font-size: 1.2rem;
     padding: 10px 20px;
-    margin: 1rem;
+    /* margin: 1rem; */
     border-radius: 0.5rem;
     border: 3px solid white;
     cursor: pointer;
@@ -35,12 +43,76 @@ button:hover {
     color: black;
 }
 
-/* Classes styling */
+input {
+    /* width: fit-content; */
+    transition: border-bottom 0.3s ease-out, color 0.3s ease-out;
+}
+
+input:focus {
+    color: gray;
+    border: 3px solid transparent;
+    border-bottom: 3px solid white;
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom 0.3s ease-out, color 0.3s ease-out;
+}
+
+/* CLASSES STYLING */
+
+/* General purpose classes */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wrappers */
+.wrapper {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.global-header-wrapper {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    text-align: center;
+}
+
+.counter-main-wrapper {
+    gap: 5rem;
+}
 
 .container {
+    position: absolute;
+    bottom: 0;
+
+    width: 80vw;
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+}
+
+.counter-title {
+    background-color: transparent;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    border: 3px solid transparent;
+    text-align: center;
+}
+
+.counter-title:hover {
+    border-bottom: 3px solid white;
+    transition: border 0.3s ease-out;
+}
+
+.counter-number-display {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2rem;
 }

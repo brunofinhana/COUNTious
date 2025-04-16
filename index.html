@@ -14,31 +14,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/11d87b1501.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <main class="counter-ui">
+  <main>
+
+    <!-- Global header -->
+    <div class="wrapper global-header-wrapper">
+      <h1>COUNTious</h1>
+      <h2>Awareness Counter</h2>
+    </div>
+
+    <!-- Counter -->
     <div class="container">
-      <div class="page-titles-wrapper">
-        <h1>COUNTious</h1>
-        <h2>Awareness Counter</h2>
+  
+      <!-- Counter Title -->
+      <div class="wrapper flex-center counter-header-wrapper" id="counter-header-wrapper">
+        <input 
+          type="text" 
+          name="counter-title" 
+          class="counter-title" 
+          id="counter-title" 
+          placeholder="E.g.: Water bottles"
+        />
       </div>
   
-      <section class="header" id="header">
-        <input type="text" name="counter-title" id="counter-title" placeholder="Water bottles"/>
-      </section>
-  
-      <section class="counter">
+      <!-- Counter Number display and "+" and "-" buttons -->
+      <div class="wrapper flex-center counter-main-wrapper">
         <button class="button" id="subtract-btn">-</button>
         <span class="counter-number-display" id="counter-number-display">00</span>
         <button class="button" id="add-btn">+</button>
-      </section>
+      </div>
   
-      <section class="footer" id="footer">
+      <!-- Counter Footer (reset button) -->
+      <div class="wrapper flex-center counter-footer-wrapper">
         <button class="button" id="reset-btn">Reset</button>
-      </section>
+      </div>
+  
     </div>
   </main>
 
+  <!-- Main JS File -->
   <script src="script.js"></script>
 </body>
 </html>
