@@ -9,6 +9,9 @@ body {
     font-family: 'DM Sans', sans-serif;
     color: white;
     background-color: #333;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 main {
@@ -30,7 +33,6 @@ button {
     color: white;
     font-size: 1.2rem;
     padding: 10px 20px;
-    /* margin: 1rem; */
     border-radius: 0.5rem;
     border: 3px solid white;
     cursor: pointer;
@@ -80,7 +82,7 @@ input:focus {
 }
 
 .counter-main-wrapper {
-    gap: 5rem;
+    justify-content: space-between;
 }
 
 .container {
@@ -88,6 +90,7 @@ input:focus {
     bottom: 0;
 
     width: 80vw;
+    max-width: fit-content;
     height: 100vh;
 
     display: flex;
