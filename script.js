@@ -29,24 +29,14 @@ function subtract() {
 // Resetting the counter
 function reset() {
     		
-			// Show confirmation modal
-			resetConfirmation.display = block
-
-			const resetYes = document.querySelector("#reset-yes")
-			const resetNo  = document.querySelector("#reset-no")
-
-			// ISSUE #1: Refactor the reset button
-			resetYes.addEventListening("click", () => {
-						counterNumber = 0
-    			counterNumberDisplay.innerHTML = counterNumber
-
-						// Cleaning the title
-						counterTitle.textContent = ""
-			})
-
-			resetNo.addEventListening("click", {
-						resetConfirmation.display = none
-			})
+	if(counterNumber == 0) {
+        return
+    } else if(confirm("Are you sure you want to reset the counter?")) {
+        counterNumber = 0
+        counterNumberDisplay.innerHTML = counterNumber
+    } else {
+        return
+    }
 
 }
 
