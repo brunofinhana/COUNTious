@@ -119,8 +119,3 @@ input:focus {
     font-weight: bold;
     margin: 2rem;
 }
-
-// ISSUE #01 - Refactor the reset button (apr 2025)
-.reset-confirmation {
-			display: none;
-}
